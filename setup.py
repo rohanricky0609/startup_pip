@@ -1,5 +1,6 @@
 import setuptools
 from subprocess import check_call
+from setuptools.command.install import install
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()

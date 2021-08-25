@@ -14,12 +14,13 @@ cmds_to_run = [
     "wget -O /content/model_data/pythia.yaml https://dl.fbaipublicfiles.com/pythia/pretrained_models/vqa2/pythia_train_val.yml",
     "wget -O /content/model_data/detectron_model.yaml https://dl.fbaipublicfiles.com/pythia/detectron_model/detectron_model.yaml",
     "wget -O /content/model_data/detectron_weights.tar.gz https://dl.fbaipublicfiles.com/pythia/data/detectron_weights.tar.gz",
-    "tar xf /content/model_data/detectron_weights.tar.gz",
-    "cd /content/ && git clone https://github.com/facebookresearch/mmf.git mmf",
-    "cd /content/mmf && sed -i '/torch/d' requirements.txt && pip install -e .",
-    "cd /content && git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git",
-    "cd vqa-maskrcnn-benchmark && python setup.py build && python setup.py develop",
+    "tar xf /content/model_data/detectron_weights.tar.gz"
 ]
+
+# "cd /content/ && git clone https://github.com/facebookresearch/mmf.git mmf",
+#     "cd /content/mmf && sed -i '/torch/d' requirements.txt && pip install -e .",
+#     "cd /content && git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git",
+#     "cd vqa-maskrcnn-benchmark && python setup.py build && python setup.py develop",
 
 # "cd /home/rohan/",
 #     "git clone https://github.com/facebookresearch/mmf.git mmf && cd mmf",

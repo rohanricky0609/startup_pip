@@ -20,7 +20,8 @@ cmds_to_run = [
     "pip install -e /content/mmf",
     "git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git /content/vqa-maskrcnn-benchmark",
     "python /content/vqa-maskrcnn-benchmark/setup.py build",
-    "cd /content/vqa-maskrcnn-benchmark && python setup.py develop"
+    "cd /content/vqa-maskrcnn-benchmark && python setup.py develop",
+    "mkdir -p /content/done"
 ]
 
 # "cd /home/rohan/",

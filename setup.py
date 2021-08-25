@@ -32,7 +32,7 @@ cmds_to_run = [
 class PostInstallCommand(install):
     def run(self):
         for cmd in cmds_to_run:
-            check_call(cmd.split())
+            check_call(cmd.split(),shell=True)
 
         #from mmf_demo import MMFDemo
 

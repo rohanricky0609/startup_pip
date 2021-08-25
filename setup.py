@@ -16,7 +16,7 @@ cmds_to_run = [
     "wget -O /content/model_data/detectron_weights.tar.gz https://dl.fbaipublicfiles.com/pythia/data/detectron_weights.tar.gz",
     "tar xf /content/model_data/detectron_weights.tar.gz",
     "git clone https://github.com/facebookresearch/mmf.git /content/mmf",
-    "sed -i '/torch/d' requirements.txt && pip install -e /content/mmf",
+    "sed -i '/torch/d' /content/mmf/requirements.txt && pip install -e /content/mmf",
     "git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git",
     "cd /content/vqa-maskrcnn-benchmark && python setup.py build && python setup.py develop",
 ]

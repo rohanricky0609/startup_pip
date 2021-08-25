@@ -15,10 +15,10 @@ cmds_to_run = [
     "wget -O /content/model_data/detectron_model.yaml https://dl.fbaipublicfiles.com/pythia/detectron_model/detectron_model.yaml",
     "wget -O /content/model_data/detectron_weights.tar.gz https://dl.fbaipublicfiles.com/pythia/data/detectron_weights.tar.gz",
     "tar xf /content/model_data/detectron_weights.tar.gz",
-    "echo '1' && cd /content/ && git clone https://github.com/facebookresearch/mmf.git mmf",
-    "echo '2' && cd /content/mmf && sed -i '/torch/d' requirements.txt && pip install -e .",
-    "echo '3' && cd /content && git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git",
-    "echo '4' && cd vqa-maskrcnn-benchmark && python setup.py build && python setup.py develop",
+    "cd /content/ && git clone https://github.com/facebookresearch/mmf.git mmf",
+    "cd /content/mmf && sed -i '/torch/d' requirements.txt && pip install -e .",
+    "cd /content && git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git",
+    "cd vqa-maskrcnn-benchmark && python setup.py build && python setup.py develop",
 ]
 
 # "cd /home/rohan/",

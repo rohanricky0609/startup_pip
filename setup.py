@@ -19,7 +19,8 @@ cmds_to_run = [
     "sed -i /torch/d /content/mmf/requirements.txt",
     "pip install -e /content/mmf",
     "git clone https://github.com/rohanricky0609/vqa-maskrcnn-benchmark.git /content/vqa-maskrcnn-benchmark",
-    "python /content/vqa-maskrcnn-benchmark/setup.py build && python /content/vqa-maskrcnn-benchmark/setup.py develop",
+    "python /content/vqa-maskrcnn-benchmark/setup.py build",
+    "python /content/vqa-maskrcnn-benchmark/setup.py develop"
 ]
 
 # "cd /home/rohan/",

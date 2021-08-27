@@ -2,6 +2,7 @@ import setuptools
 from subprocess import check_call
 from setuptools.command.install import install
 from setuptools.command.develop import develop
+from setuptools.command.egg_info import egg_info
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -33,7 +34,7 @@ cmds_to_run = [
 
 class PostInstallCommand(install):
     def run(self):
-        #install.run(self)
+        install.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 
@@ -41,13 +42,13 @@ class PostInstallCommand(install):
 
 class CustomDevelopCommand(develop):
     def run(self):
-       # develop.run(self)
+       develop.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 
 class CustomEggInfoCommand(egg_info):
     def run(self):
-        #egg_info.run(self)
+        egg_info.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 

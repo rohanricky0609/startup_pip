@@ -32,10 +32,17 @@ cmds_to_run = [
 
 class PostInstallCommand(install):
     def run(self):
+        install.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 
         #from mmf_demo import MMFDemo
+
+class CustomDevelopCommand(develop):
+    def run(self):
+        develop.run(self)
+        for cmd in cmds_to_run:
+            check_call(cmd,shell=True)
 
 setuptools.setup(
     name="startup_pip",

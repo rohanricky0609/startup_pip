@@ -33,7 +33,7 @@ cmds_to_run = [
 
 class PostInstallCommand(install):
     def run(self):
-        install.run(self)
+        #install.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 
@@ -41,13 +41,13 @@ class PostInstallCommand(install):
 
 class CustomDevelopCommand(develop):
     def run(self):
-        develop.run(self)
+       # develop.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 
 class CustomEggInfoCommand(egg_info):
     def run(self):
-        egg_info.run(self)
+        #egg_info.run(self)
         for cmd in cmds_to_run:
             check_call(cmd,shell=True)
 

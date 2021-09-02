@@ -3,6 +3,7 @@ from subprocess import check_call
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 from setuptools.command.egg_info import egg_info
+import os
 
 with open("README.md", "r", encoding="utf-8") as fh:
 	long_description = fh.read()
@@ -50,6 +51,12 @@ class PostInstallCommand(install):
 		for cmd in cmds_to_run:
 			check_call(cmd,shell=True)
 
+		cwd = os.getcwd()
+
+		os.chdir('/home/app/function')
+		from pypredict import MMFDemo
+		demo = MMFDemo()
+		os.chdir(cwd)
 		#from mmf_demo import MMFDemo
 
 class CustomDevelopCommand(develop):

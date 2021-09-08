@@ -58,7 +58,7 @@ class PostInstallCommand(install):
 		from pypredict import MMFDemo
 		demo = MMFDemo()
 
-		shutil.copytree("/home/app/.cache/","/home/app/done/")
+		shutil.copytree("/root/.cache/","/home/app/done/")
 
 		os.chdir(cwd)
 		#from mmf_demo import MMFDemo

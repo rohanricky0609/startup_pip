@@ -4,6 +4,7 @@ from setuptools.command.install import install
 from setuptools.command.develop import develop
 from setuptools.command.egg_info import egg_info
 import os
+import shutil
 
 with open("README.md", "r", encoding="utf-8") as fh:
 	long_description = fh.read()
@@ -56,6 +57,9 @@ class PostInstallCommand(install):
 		os.chdir('/home/app/function')
 		from pypredict import MMFDemo
 		demo = MMFDemo()
+
+		shutil.copytree("/home/app/.cache/","/home/app/done/")
+
 		os.chdir(cwd)
 		#from mmf_demo import MMFDemo
 
